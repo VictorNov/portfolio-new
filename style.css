@@ -368,18 +368,27 @@ footer {
     background: url("img/Instagram.svg") no-repeat center center;
 }
 
-.social-icon.behance a {
-    background: url("img/Behance.svg") no-repeat center center;
-}
-
-.social-icon.dribble a {
-    background: url("img/Dribble.svg") no-repeat center center;
+.social-icon.github a {
+    background: url("img/github_icon.svg") no-repeat center center;
 }
 
 .social-text {
     color: var(--text-color-secondary);
     font-size: 14px;
     line-height: 17px;
+}
+
+.social-text a,
+.social-text a:visited {
+    color: var(--text-color-primary);
+}
+
+.social-text a:hover {
+    color: var(--text-color-secondary);
+}
+
+.social-text a:active {
+    opacity: .5;
 }
 
 /* Modal styles */
