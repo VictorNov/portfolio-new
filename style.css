@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global variables */
+
+:root {
+    --font-size: 18px;
+    --line-height: 22px;
+
+    --text-color-primary: #070707;
+    --text-color-secondary: #828282;
+
+    --bg-color-primary: #fff;
+    --bg-color-secondary: #f6f6f6;
+}
+
+html,
+body {
+    font-family: "Gilroy-Medium", sans-serif;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: var(--text-color-primary);
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+/* Header styles */
+
+header {
+    background-color: var(--bg-color-primary);
+}
+
+.header-menu {
+    height: 88px;
+    border-bottom: 2px solid var(--text-color-secondary);
+}
+
+.header-menu-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    content: "";
+    height: 0;
+    width: 0;
+    border-bottom: 2px solid var(--text-color-primary);
+    transition: width .3s;
+}
+
+.menu-item:hover::after {
+    width: 100%;
+}
+
+.menu-item a {
+    display: block;
+    height: 48px;
+    line-height: 48px;
+
+    color: var(--text-color-secondary);
+    font-family: "Gilroy-Bold", sans-serif;
+    text-decoration: none;
+
+    transition: color, .3s;
+}
+
+.menu-item a:hover {
+    color: var(--text-color-primary);
+}
+
+.menu-item.current > a {
+    color: var(--text-color-primary);
+}
+
+.personal-name-profession {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 190px;
+}
+
+.personal-name {
+    margin-right: 130px;
+}
+
+.personal-name h1 {
+    font-size: 47px;
+    line-height: 58px;
+}
+
+.profession-info {
+    align-self: flex-end;
+    margin-bottom: 44px;
+}
+
+.personal-photo {
+    margin-bottom: 100px;
+}
+
+.personal-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Main section styles */
+
+.about-me {
+    background-color: var(--bg-color-secondary);
+    padding-top: 120px;
+    padding-bottom: 107px;
+}
+
+.section-title {
+    font-family: "Gilroy-Bold", sans-serif;
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 42px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about-me-content {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 485px;
+}
+
+.about-me-content p {
+    margin-bottom: 2rem;
+}
+
+.about-me-content p:last-child {
+    margin-bottom: 0;
+}
+
+.skills {
+    padding-top: 90px;
+    padding-bottom: 80px;
+}
+
+.skills .section-title {
+    margin-bottom: 69px;
+}
+
+.skills-description {
+    text-align: center;
+    margin-bottom: 83px;
+}
+
+.skills-cards {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 165px;
+    height: 205px;
+    margin: 0 10px 30px;
+}
+
+.skill-item-img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 25px;
+}
+
+.skill-item-title {
+    color: var(--text-color-secondary);
+    font-family: "Gilroy-Bold", sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: auto;
+    text-align: center;
+    width: 90px;
+}
+
+.skill-item-rating {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.skill-item-rating .star {
+    background: url("img/Star.svg") no-repeat center center;
+    width: 26px;
+    height: 26px;
+}
+
+.skill-item-rating .star.disabled {
+    background-image: url("img/Star-disabled.svg");
+}
+
+.portfolio {
+    background-color: var(--bg-color-secondary);
+    padding-top: 113px;
+    padding-bottom: 96px;
+}
+
+.portfolio .section-title {
+    margin-bottom: 47px;
+}
+
+.portfolio-list {
+    list-style: none;
+}
+
+.portfolio-item {
+    text-align: center;
+    margin-bottom: 99px;
+}
+
+.portfolio-item:last-child {
+    margin-bottom: 0;
+}
+
+.portfolio-item-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 45px;
+}
+
+.portfolio-item-link {
+    color: var(--text-color-primary);
+    font-family: "Gilroy-Medium", sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    transition: all .2s;
+}
+
+.portfolio-item-link:hover {
+    color: var(--text-color-secondary);
+}
+
+.portfolio-item-link:active {
+    opacity: .5;
+}
+
+/* Footer section */
+
+footer {
+    padding-top: 114px;
+    padding-bottom: 123px;
+}
+
+.container-footer {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+    .container-footer {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+.contacts-text {
+    margin-bottom: 30px;
+}
+
+.contacts-button {
+    background-color: var(--text-color-primary);
+    color: var(--bg-color-primary);
+    font: inherit;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 24px;
+    margin-bottom: 85px;
+    transition: all .2s;
+}
+
+.contacts-button:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+    transform: translateY(-5px);
+}
+
+.contacts-button:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    transform: translateY(0);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-bottom: 45px;
+}
+
+.social-icon a {
+    display: block;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.social-icon.linkedin a {
+    background: url("img/Linkedin.svg") no-repeat center center;
+}
+
+.social-icon.instagram a {
+    background: url("img/Instagram.svg") no-repeat center center;
+}
+
+.social-icon.behance a {
+    background: url("img/Behance.svg") no-repeat center center;
+}
+
+.social-icon.dribble a {
+    background: url("img/Dribble.svg") no-repeat center center;
+}
+
+.social-text {
+    color: var(--text-color-secondary);
+    font-size: 14px;
+    line-height: 17px;
+}
