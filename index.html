@@ -13,10 +13,10 @@
             <nav class="header-menu">
                 <ul class="header-menu-wrapper">
                     <li class="menu-item current"><a href="#">Home</a></li>
-                    <li class="menu-item"><a href="#">About me</a></li>
-                    <li class="menu-item"><a href="#">Skills</a></li>
-                    <li class="menu-item"><a href="#">Portfolio</a></li>
-                    <li class="menu-item"><a href="#">Contacts</a></li>
+                    <li class="menu-item"><a href="#about-me">About me</a></li>
+                    <li class="menu-item"><a href="#skills">Skills</a></li>
+                    <li class="menu-item"><a href="#portfolio">Portfolio</a></li>
+                    <li class="menu-item"><a href="#contacts">Contacts</a></li>
                 </ul>
             </nav>
             <div class="personal-info">
@@ -32,28 +32,99 @@
     </header>
 
     <main>
-        <section class="about-me">
+        <section class="about-me" id="about-me">
             <div class="container">
                 <h2 class="section-title">About me</h2>
                 <div class="about-me-content">
-                    <p>Hi, I'm Denis – UX/UI designer from Minsk.<br>
-                        I'm interested in design and everything connected with it.</p>
+                    <p>Меня зовут Новокшенов Виктор и я — начинающий Frontend разработчик.</p>
 
-                    <p>I'm studying at courses "Web and mobile design<br>
-                        interfaces" in IT-Academy.</p>
+                    <p>На текущий момент мною полностью пройден курс Frontend Developer на портале JetBrains.<br>
+                        Прошел все тренажеры HTML Academy. В том числе по JavaScript, PHP, верстке продвинутого уровня.<br>
+                        Умею верстать на флексах, гридах и, если внезапно понадобится, даже на флоатах и таблицах.</p>
 
-                    <p>Ready to implement excellent projects<br>
-                    with wonderful people.</p>
+                    <p>В работе над проектами стараюсь писать максимально простой и понятный код,
+                        придерживаюсь общих рекомендаций по стилю кода и наименованию классов/переменных.<br>
+                        Считаю, что верстка должна быть адаптивной, а интерфейс максимально дружественным для пользователя.</p>
+
+                    <p>Ознакомиться с моими учебными работами можно в разделе
+                        <a href="#portfolio" class="text-link">портфолио</a> и на
+                        <a href="https://github.com/VictorNov" class="text-link" target="_blank" rel="noopener">GitHUB</a>.</p>
                 </div>
             </div>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
             <div class="container">
                 <h2 class="section-title">Skills</h2>
-                <p class="skills-description">I work in such programs as</p>
+                <p class="skills-description">Имею опыт работы со следующими технологиями и программами:</p>
                 <div class="skills-cards">
                     <div class="skill-item">
-                        <img src="img/PS.svg" alt="PS" class="skill-item-img">
+                        <img src="img/html5_icon.svg" alt="HTML5" title="HTML5" class="skill-item-img">
+                        <p class="skill-item-title">HTML5</p>
+                        <div class="skill-item-rating">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star disabled"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/css3_icon.svg" alt="CSS3" title="CSS3" class="skill-item-img">
+                        <p class="skill-item-title">CSS3</p>
+                        <div class="skill-item-rating">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star disabled"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/js_icon.svg" alt="JavaScript" title="JavaScript" class="skill-item-img">
+                        <p class="skill-item-title">JavaScript</p>
+                        <div class="skill-item-rating">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star disabled"></div>
+                            <div class="star disabled"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/less_icon.svg" alt="LESS" title="LESS" class="skill-item-img">
+                        <p class="skill-item-title">LESS</p>
+                        <div class="skill-item-rating">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star disabled"></div>
+                            <div class="star disabled"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/bootstrap_icon.svg" alt="Bootstrap" title="Bootstrap" class="skill-item-img">
+                        <p class="skill-item-title">Bootstrap</p>
+                        <div class="skill-item-rating">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star disabled"></div>
+                            <div class="star disabled"></div>
+                            <div class="star disabled"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/webpack.svg" alt="Webpack" title="Webpack" class="skill-item-img">
+                        <p class="skill-item-title">Webpack</p>
+                        <div class="skill-item-rating">
+                            <div class="star"></div>
+                            <div class="star disabled"></div>
+                            <div class="star disabled"></div>
+                            <div class="star disabled"></div>
+                            <div class="star disabled"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/PS.svg" alt="Photoshop" title="Photoshop" class="skill-item-img">
                         <p class="skill-item-title">Adobe Photoshop</p>
                         <div class="skill-item-rating">
                             <div class="star"></div>
@@ -64,29 +135,7 @@
                         </div>
                     </div>
                     <div class="skill-item">
-                        <img src="img/AI.svg" alt="AI" class="skill-item-img">
-                        <p class="skill-item-title">Adobe Illustrator</p>
-                        <div class="skill-item-rating">
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star disabled"></div>
-                            <div class="star disabled"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <img src="img/AE.svg" alt="AE" class="skill-item-img">
-                        <p class="skill-item-title">Adobe<br> After Effects</p>
-                        <div class="skill-item-rating">
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star disabled"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <img src="img/Figma.svg" alt="Figma" class="skill-item-img">
+                        <img src="img/Figma.svg" alt="Figma" title="Figma" class="skill-item-img">
                         <p class="skill-item-title">Figma</p>
                         <div class="skill-item-rating">
                             <div class="star"></div>
@@ -99,27 +148,85 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="container">
                 <h2 class="section-title">Portfolio</h2>
                 <ul class="portfolio-list">
                     <li class="portfolio-item">
-                        <img src="img/portfolio-1.png" alt="Online fashion store - Homepage" class="portfolio-item-img">
-                        <a href="" class="portfolio-item-link">
-                            Online fashion store - Homepage
+                        <img src="img/kvast.png" alt="Кваст" class="portfolio-item-img">
+                        <a href="/kvast" class="portfolio-item-link" rel="noopener">
+                            <q>Кваст</q> – макет сайта производителя кваса
                         </a>
+                        <p>
+                            Учебный проект HTML Academy.<br>
+                            В проекте реализована семантическая верстка по макету в формате PSD. 100% Pixel Perfect
+                        </p>
                     </li>
                     <li class="portfolio-item">
-                        <img src="img/portfolio-2.png" alt="Reebok Store - Concept" class="portfolio-item-img">
-                        <a href="" class="portfolio-item-link">
-                            Reebok Store - Concept
+                        <img src="img/cafe.png" alt="Hyperskill Cafe" class="portfolio-item-img">
+                        <a href="/cafe" class="portfolio-item-link" rel="noopener">
+                            Hyperskill Cafe
                         </a>
+                        <p>
+                            Практический проект адаптивной верстки с использованием библиотеки Bootstrap
+                        </p>
                     </li>
                     <li class="portfolio-item">
-                        <img src="img/portfolio-3.png" alt="Braun Landing Page - Concept" class="portfolio-item-img">
-                        <a href="" class="portfolio-item-link">
-                            Braun Landing Page - Concept
+                        <img src="img/hypergram.png" alt="Hypergram" class="portfolio-item-img">
+                        <a href="/hypergram" class="portfolio-item-link" rel="noopener">
+                            Hypergram
                         </a>
+                        <p>
+                            Простой редактор изображений, который позволяет загрузить пользовательское изображение.
+                            Изменить параметры яркости, контраста, прозрачности и сохранить результат на компьютер.
+                        </p>
+                    </li>
+                    <li class="portfolio-item">
+                        <img src="img/to-do-list.png" alt="To-Do List" class="portfolio-item-img">
+                        <a href="/to-do-list" class="portfolio-item-link" rel="noopener">
+                            To-Do List
+                        </a>
+                        <p>
+                            Простой список дел, который позволяет добаввлять новые задания, отмечать уже выполненные и удалять ненужные строки.<br>
+                            Кроме того в проекте реализовано хранение задач в Local Storage, что позволяет задачам не сбрасываться при перезагрузке.
+                        </p>
+                    </li>
+                    <li class="portfolio-item">
+                        <img src="img/open-space.png" alt="Open Space" class="portfolio-item-img">
+                        <a href="/open-space" class="portfolio-item-link" rel="noopener">
+                            Open Space
+                        </a>
+                        <p>
+                            Мини-головоломка в которой необходимо найти пароль от панели управления, включить все тумблеры и, наконец, запустить ракету в открытый космос!
+                        </p>
+                    </li>
+                    <li class="portfolio-item">
+                        <img src="img/case-converter.png" alt="Case Converter" class="portfolio-item-img">
+                        <a href="/case-converter" class="portfolio-item-link" rel="noopener">
+                            Case Converter
+                        </a>
+                        <p>
+                            Текстовый редактор, который позволяет пользователю быстро изменить регистр текста и сохранить в .txt файл
+                        </p>
+                    </li>
+                    <li class="portfolio-item">
+                        <img src="img/virtual-piano.png" alt="Virtual Piano" class="portfolio-item-img">
+                        <a href="/virtual-piano" class="portfolio-item-link" rel="noopener">
+                            Virtual Piano
+                        </a>
+                        <p>
+                            В этом проекте реализовано виртуальное пианино, клавиши которого звучат при клике мышкой или нажатии соответствующей клавиши на клавиатуре
+                        </p>
+                    </li>
+                    <li class="portfolio-item">
+                        <img src="img/flashcards.png" alt="Flashcards" class="portfolio-item-img">
+                        <a href="/flashcards" class="portfolio-item-link" rel="noopener">
+                            Flashcards
+                        </a>
+                        <p>
+                            В данном проекте реализована механика трехмерной трансформации элементов при наведении курсора.
+                            Довольно интересный способ реализации информационных карточек на сайте.
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -127,7 +234,7 @@
     </main>
 
     <footer>
-        <div class="container-footer">
+        <div class="container-footer" id="contacts">
             <h2 class="section-title">Contacts</h2>
             <p class="contacts-text">
                 Want to know more or just chat?<br>
@@ -135,7 +242,7 @@
             </p>
             <button class="contacts-button">Send message</button>
             <ul class="social-icons">
-                <li class="social-icon linkedin"><a href=""></a></li>
+                <li class="social-icon habr"><a href="https://career.habr.com/victor_nov" title="habr" target="_blank" rel="noopener">habr</a></li>
                 <li class="social-icon instagram"><a href=""></a></li>
                 <li class="social-icon behance"><a href=""></a></li>
                 <li class="social-icon dribble"><a href=""></a></li>
@@ -146,6 +253,30 @@
             </p>
         </div>
     </footer>
+
+    <div class="modal-contacts-container">
+        <div class="modal-contacts">
+            <form class="contacts-form" action="mail.php" method="post">
+                <fieldset>
+                    <legend>Оставьте сообщение:</legend>
+                    <label>Ваше имя:
+                        <input type="text" name="name">
+                    </label>
+                    <label>E-mail:
+                        <input type="email" name="email">
+                    </label>
+                    <label>Номер телефона:
+                        <input type="tel" name="phone">
+                    </label>
+                    <label>Сообщение:
+                        <textarea rows="5" cols="45" name="message"></textarea>
+                    </label>
+                    <input type="submit" value="Отправить сообщение">
+                </fieldset>
+            </form>
+            <span class="icon-close">Close</span>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
