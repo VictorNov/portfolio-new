@@ -122,6 +122,8 @@ header {
 }
 
 .burger-menu-button {
+    cursor: pointer;
+    display: none;
     position: absolute;
     top: 0;
     right: 30px;
@@ -267,6 +269,10 @@ header {
         display: none;
     }
 
+    .burger-menu-button {
+        display: block;
+    }
+
     .header-menu-modal {
         display: block;
     }
@@ -342,13 +348,13 @@ header {
     gap: 60px 20px;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 860px) {
     .skills-cards {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 660px) {
     .skills-cards {
         grid-template-columns: 1fr;
     }
@@ -524,16 +530,16 @@ footer {
     line-height: 17px;
 }
 
-.social-text a,
-.social-text a:visited {
+.contacts-text a,
+.contacts-text a:visited {
     color: var(--text-color-primary);
 }
 
-.social-text a:hover {
+.contacts-text a:hover {
     color: var(--text-color-secondary);
 }
 
-.social-text a:active {
+.contacts-text a:active {
     opacity: .5;
 }
 
@@ -550,18 +556,18 @@ footer {
     scroll-behavior: unset;
 }
 
-.open {
-    display: block;
+.contacts-open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-contacts {
-    width: 500px;
+    max-width: 500px;
+    margin: 28px;
     padding: 20px;
     background-color: var(--bg-color-primary);
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .modal-contacts .icon-close {
@@ -569,8 +575,8 @@ footer {
     position: absolute;
     top: 5px;
     right: 5px;
-    width: 44px;
-    height: 44px;
+    width: 33px;
+    height: 33px;
     cursor: pointer;
 }
 

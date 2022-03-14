@@ -17,6 +17,6 @@ let closeContactButton = document.querySelector(".modal-contacts .icon-close");
 let submitButton = document.querySelector(".contacts-form input[type='submit']");
 let modalContacts = document.querySelector(".modal-contacts-container");
 
-contactButton.addEventListener( "click", () => modalContacts.classList.add("open") );
-closeContactButton.addEventListener( "click", () => modalContacts.classList.remove("open") );
-submitButton.addEventListener( "click", () => modalContacts.classList.remove("open") );
+contactButton.addEventListener( "click", () => modalContacts.classList.add("contacts-open") );
+closeContactButton.addEventListener( "click", () => modalContacts.classList.remove("contacts-open") );
+submitButton.addEventListener( "click", () => modalContacts.classList.remove("contacts-open") );
