@@ -46,4 +46,14 @@ function sendRequest(event) {
     request.open("POST", form.action);
 
     request.send(formData);
+
+    request.onreadystatechange = function () {
+        if (request.readyState === 4 && request.status === 200) {
+            form.name.value = "";
+            form.email.value = "";
+            form.phone.value = "";
+            form.message.value = "";
+            alert("Сообщение успешно отправлено");
+        }
+    }
 }
