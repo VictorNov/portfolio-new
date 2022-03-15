@@ -545,6 +545,58 @@ footer {
 
 /* Modal styles */
 
+.to-top-button {
+    position: fixed;
+    background-color: var(--bg-color-primary);
+    border: 2px solid var(--text-color-secondary);
+    border-radius: 50%;
+    color: var(--text-color-primary);
+    width: 44px;
+    height: 44px;
+    bottom: -50px;
+    right: 22px;
+    transition: all .2s;
+    text-align: center;
+    transform: translateY(66px);
+}
+
+.to-top-button-show {
+    transform: translateY(0);
+    bottom: 22px;
+}
+
+.to-top-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+.to-top-button:active {
+    transform: translateY(0);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    opacity: .5;
+}
+
+.to-top-icon {
+    position: relative;
+    display: inline-block;
+    width: 3px;
+    height: 26px;
+    background-color: var(--text-color-primary);
+    top: 7px;
+}
+
+.to-top-icon::after {
+    content: "";
+    position: absolute;
+    right: -6.5px;
+    width: 13px;
+    height: 13px;
+    background-color: transparent;
+    border-top: 3px solid var(--text-color-primary);
+    border-right: 3px solid var(--text-color-primary);
+    transform: rotate(-45deg);
+}
+
 .modal-contacts-container {
     display: none;
     width: 100vw;

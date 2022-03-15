@@ -20,3 +20,15 @@ let modalContacts = document.querySelector(".modal-contacts-container");
 contactButton.addEventListener( "click", () => modalContacts.classList.add("contacts-open") );
 closeContactButton.addEventListener( "click", () => modalContacts.classList.remove("contacts-open") );
 submitButton.addEventListener( "click", () => modalContacts.classList.remove("contacts-open") );
+
+let toTopButton = document.querySelector(".to-top-button");
+
+window.addEventListener( "scroll", () => {
+    if (scrollY > document.documentElement.clientHeight) {
+        toTopButton.classList.add("to-top-button-show");
+    } else {
+        toTopButton.classList.remove("to-top-button-show");
+    }
+} );
+
+toTopButton.addEventListener( "click", () => window.scrollTo(scrollX, 0) );
