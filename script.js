@@ -32,3 +32,18 @@ window.addEventListener( "scroll", () => {
 } );
 
 toTopButton.addEventListener( "click", () => window.scrollTo(scrollX, 0) );
+
+let form = document.forms[0];
+
+form.submit.addEventListener( "click", sendRequest )
+
+function sendRequest(event) {
+    event.preventDefault();
+    let formData = new FormData(form);
+
+    let request = new XMLHttpRequest();
+
+    request.open("POST", form.action);
+
+    request.send(formData);
+}
