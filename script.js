@@ -6,6 +6,7 @@ let modalMenuButtons = document.querySelectorAll(".menu-modal-item");
 burgerButton.addEventListener( "click", () => {
     burgerIcon.classList.toggle("active");
     modalMenu.classList.toggle("open");
+    document.body.classList.toggle("fixed");
 } );
 modalMenuButtons.forEach( (item) => item.addEventListener( "click", () => {
     burgerIcon.classList.remove("active");

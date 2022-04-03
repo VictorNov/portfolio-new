@@ -26,6 +26,10 @@ body {
     scroll-behavior: smooth;
 }
 
+body.fixed {
+    position: fixed;
+}
+
 .container {
     position: relative;
     max-width: 940px;
@@ -205,6 +209,9 @@ header {
     display: block;
     width: 100%;
     height: auto;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
 }
 
 .personal-photo img.photo-sm {
@@ -344,19 +351,26 @@ header {
 .skills-cards {
     align-items: stretch;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 60px 20px;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: center;
+    gap: 3rem 2rem;
 }
 
 @media screen and (max-width: 860px) {
     .skills-cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, max-content);
     }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 500px) {
     .skills-cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, max-content);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .skills-cards {
+        grid-template-columns: max-content;
     }
 }
 
@@ -365,14 +379,13 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-width: 165px;
-    height: 205px;
+    width: 130px;
 }
 
 .skill-item-img {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 25px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
 }
 
 .skill-item-title {
@@ -380,25 +393,27 @@ header {
     font-family: "Gilroy-Bold", sans-serif;
     font-size: 14px;
     line-height: 17px;
-    margin-bottom: auto;
+    margin-bottom: 1rem;
     text-align: center;
     width: 90px;
 }
 
 .skill-item-rating {
     display: flex;
-    justify-content: space-between;
-    width: 165px;
+    justify-content: center;
+    -webkit-column-gap: .5rem;
+    -moz-column-gap: .5rem;
+    column-gap: .5rem;
 }
 
 .skill-item-rating .star {
-    background: url("img/Star.svg") no-repeat center center;
-    width: 26px;
-    height: 26px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='12' height='12'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z'/%3E%3C/svg%3E");
+    width: 12px;
+    height: 12px;
 }
 
 .skill-item-rating .star.disabled {
-    background-image: url("img/Star-disabled.svg");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='12' height='12'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z' fill='rgba(175,175,175,1)'/%3E%3C/svg%3E");
 }
 
 .portfolio {
@@ -413,15 +428,29 @@ header {
 
 .portfolio-list {
     list-style: none;
+    display: grid;
+    row-gap: 99px;
 }
 
 .portfolio-item {
+    display: grid;
+    grid-template-columns: 1fr;
     text-align: center;
-    margin-bottom: 99px;
 }
 
-.portfolio-item:last-child {
-    margin-bottom: 0;
+@media screen and (min-width: 768px) {
+    .portfolio-list {
+        row-gap: 50px;
+    }
+
+    .portfolio-item {
+        grid-template-columns: 1fr 1fr;
+        -webkit-column-gap: 5rem;
+        -moz-column-gap: 5rem;
+        column-gap: 3rem;
+        text-align: initial;
+        padding: 0 2rem;
+    }
 }
 
 .portfolio-item-img {
@@ -551,8 +580,8 @@ footer {
     border: 2px solid var(--text-color-secondary);
     border-radius: 50%;
     color: var(--text-color-primary);
-    width: 44px;
-    height: 44px;
+    width: 30px;
+    height: 30px;
     bottom: -50px;
     right: 22px;
     transition: all .2s;
@@ -574,27 +603,6 @@ footer {
     transform: translateY(0);
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
     opacity: .5;
-}
-
-.to-top-icon {
-    position: relative;
-    display: inline-block;
-    width: 3px;
-    height: 26px;
-    background-color: var(--text-color-primary);
-    top: 7px;
-}
-
-.to-top-icon::after {
-    content: "";
-    position: absolute;
-    right: -6.5px;
-    width: 13px;
-    height: 13px;
-    background-color: transparent;
-    border-top: 3px solid var(--text-color-primary);
-    border-right: 3px solid var(--text-color-primary);
-    transform: rotate(-45deg);
 }
 
 .modal-contacts-container {
