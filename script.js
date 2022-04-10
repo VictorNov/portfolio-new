@@ -6,7 +6,7 @@ let modalMenuButtons = document.querySelectorAll(".menu-modal-item");
 burgerButton.addEventListener( "click", () => {
     burgerIcon.classList.toggle("active");
     modalMenu.classList.toggle("open");
-    document.body.classList.toggle("fixed");
+    /*document.body.classList.toggle("fixed");*/
 } );
 modalMenuButtons.forEach( (item) => item.addEventListener( "click", () => {
     burgerIcon.classList.remove("active");
@@ -58,3 +58,25 @@ function sendRequest(event) {
         }
     }
 }
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2000,
+    delay: 400,
+})
+
+sr.reveal('.section-title')
+sr.reveal(`.personal-name, .profession-info,
+           .about-me-content p, .skill-item, .skills-description, .portfolio__tag`, {
+    interval: 200,
+})
+sr.reveal('.personal-photo, .container-footer', {
+    origin: 'bottom',
+})
+sr.reveal(`.portfolio-item-img`, {
+    origin: 'left',
+})
+sr.reveal(`.portfolio-item-data`, {
+    origin: 'right',
+})

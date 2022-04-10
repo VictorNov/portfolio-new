@@ -6,28 +6,42 @@
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="style.css">
   <title>Victor Novokshenov, Junior Frontend Developer</title>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(87896141, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/87896141" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
 <body>
 <header>
   <div class="container">
 
-    <nav class="header__menu">
-      <ul class="header__menu-wrapper">
+    <nav class="header-menu">
+      <ul class="header-menu-wrapper">
         <li class="menu-item current"><a href="#">Home</a></li>
-        <li class="menu-item"><a href="#about-me">About me</a></li>
-        <li class="menu-item"><a href="#skills">Skills</a></li>
-        <li class="menu-item"><a href="#portfolio">Portfolio</a></li>
-        <li class="menu-item"><a href="#contacts">Contacts</a></li>
+        <li class="menu-item"><a href="#about-me">Обо мне</a></li>
+        <li class="menu-item"><a href="#skills">Скиллы</a></li>
+        <li class="menu-item"><a href="#portfolio">Портфолио</a></li>
+        <li class="menu-item"><a href="#contacts">Контакты</a></li>
       </ul>
     </nav>
 
     <div class="header-menu-modal">
       <ul class="header-menu-modal-wrapper">
         <li class="menu-modal-item current"><a href="#">Home</a></li>
-        <li class="menu-modal-item"><a href="#about-me">About me</a></li>
-        <li class="menu-modal-item"><a href="#skills">Skills</a></li>
-        <li class="menu-modal-item"><a href="#portfolio">Portfolio</a></li>
-        <li class="menu-modal-item"><a href="#contacts">Contacts</a></li>
+        <li class="menu-modal-item"><a href="#about-me">Обо мне</a></li>
+        <li class="menu-modal-item"><a href="#skills">Скиллы</a></li>
+        <li class="menu-modal-item"><a href="#portfolio">Портфолио</a></li>
+        <li class="menu-modal-item"><a href="#contacts">Контакты</a></li>
       </ul>
     </div>
 
@@ -52,7 +66,7 @@
 <main>
   <section class="about-me" id="about-me">
     <div class="container">
-      <h2 class="section-title">About me</h2>
+      <h2 class="section-title">Обо Мне</h2>
       <div class="about-me-content">
         <p>Меня зовут Новокшенов Виктор и я — начинающий Frontend разработчик.</p>
 
@@ -72,7 +86,7 @@
   </section>
   <section class="skills" id="skills">
     <div class="container">
-      <h2 class="section-title">Skills</h2>
+      <h2 class="section-title">Скиллы</h2>
       <p class="skills-description">Имею опыт работы со следующими технологиями и программами:</p>
       <div class="skills-cards">
         <div class="skill-item">
@@ -109,8 +123,8 @@
           </div>
         </div>
         <div class="skill-item">
-          <img src="img/less_icon.svg" alt="LESS" title="LESS" class="skill-item-img">
-          <p class="skill-item-title">LESS</p>
+          <img src="img/logo_sass_icon.svg" alt="Sass" title="Sass" class="skill-item-img">
+          <p class="skill-item-title">Sass</p>
           <div class="skill-item-rating">
             <div class="star"></div>
             <div class="star"></div>
@@ -120,8 +134,8 @@
           </div>
         </div>
         <div class="skill-item">
-          <img src="img/bootstrap_icon.svg" alt="Bootstrap" title="Bootstrap" class="skill-item-img">
-          <p class="skill-item-title">Bootstrap</p>
+          <img src="img/pug-final-logo.svg" alt="Pug" title="Pug" class="skill-item-img">
+          <p class="skill-item-title">Pug</p>
           <div class="skill-item-rating">
             <div class="star"></div>
             <div class="star"></div>
@@ -135,7 +149,7 @@
           <p class="skill-item-title">Webpack</p>
           <div class="skill-item-rating">
             <div class="star"></div>
-            <div class="star disabled"></div>
+            <div class="star"></div>
             <div class="star disabled"></div>
             <div class="star disabled"></div>
             <div class="star disabled"></div>
@@ -168,7 +182,7 @@
   </section>
   <section class="portfolio" id="portfolio">
     <div class="container">
-      <h2 class="section-title">Portfolio</h2>
+      <h2 class="section-title">Портфолио</h2>
       <ul class="portfolio-list">
         <li class="portfolio-item">
           <img src="img/travel.png" alt="" class="portfolio-item-img">
@@ -356,7 +370,7 @@
 
 <footer>
   <div class="container-footer" id="contacts">
-    <h2 class="section-title">Contacts</h2>
+    <h2 class="section-title">Контакты</h2>
     <p class="contacts-text">
       Вы можете связаться со мной, написав письмо на
       <a href="mailto:victornov@bk.ru">victornov@bk.ru</a> <br/>
@@ -377,7 +391,7 @@
 </footer>
 
 <div class="to-top-button">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z"/></svg>
 </div>
 
 <div class="modal-contacts-container">
@@ -403,6 +417,7 @@
     <span class="icon-close">Close</span>
   </div>
 </div>
+<script src="scrollreveal.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
